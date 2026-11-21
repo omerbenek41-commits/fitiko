@@ -22,4 +22,6 @@ export default function Auth() {
       <button type="button" className="mt-3 w-full text-sm text-neutral-400" onClick={() => setUp(!up)}>{up ? "Hesabın var mı? Giriş yap" : "Hesabın yok mu? Kayıt ol"}</button>
     </form>
   );
+  <p className="mb-4 text-xs text-neutral-500">{(process.env.NEXT_PUBLIC_SUPABASE_URL || "URL YOK").slice(0, 45)} · {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? "anahtar var" : "anahtar YOK"}</p>
 }
+
