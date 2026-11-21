@@ -1,0 +1,6 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{background:#0d0f0e;color:#eef2ef}
+.card{@apply rounded-2xl border border-neutral-800 bg-neutral-900 p-4 mb-3}
+.inp{@apply w-full rounded-xl border border-neutral-800 bg-neutral-800 p-2.5 text-white}
+.btn{@apply rounded-xl bg-neutral-800 border border-neutral-700 px-3 py-2}
+.pri{@apply rounded-xl bg-g text-black font-bold px-3 py-2}
