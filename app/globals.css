@@ -1,6 +1,17 @@
-@tailwind base;@tailwind components;@tailwind utilities;
-body{background:#0d0f0e;color:#eef2ef}
-.card{@apply rounded-2xl border border-neutral-800 bg-neutral-900 p-4 mb-3}
-.inp{@apply w-full rounded-xl border border-neutral-800 bg-neutral-800 p-2.5 text-white}
-.btn{@apply rounded-xl bg-neutral-800 border border-neutral-700 px-3 py-2}
-.pri{@apply rounded-xl bg-g text-black font-bold px-3 py-2}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { color-scheme: dark; -webkit-tap-highlight-color: transparent; }
+body { background: #0d0f0e; color: #eef2ef; }
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+
+@layer components {
+  .card { @apply mb-3 rounded-2xl border border-neutral-800 bg-neutral-900 p-4; }
+  .inp { @apply w-full rounded-xl border border-neutral-800 bg-neutral-800 p-2.5 text-white outline-none placeholder:text-neutral-500 focus:border-g/60; }
+  .btn { @apply rounded-xl border border-neutral-700 bg-neutral-800 px-3 py-2 transition active:scale-95 disabled:opacity-40; }
+  .pri { @apply rounded-xl bg-g px-3 py-2 font-bold text-black transition active:scale-95; }
+  .chip { @apply rounded-full border border-neutral-700 px-3 py-1 text-sm text-neutral-300; }
+  .chip-on { @apply border-g bg-g/15 text-g; }
+}
